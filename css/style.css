@@ -61,6 +61,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 body.is-loading { overflow: hidden; }
 img, svg, canvas { display: block; max-width: 100%; }
@@ -463,7 +464,7 @@ ol, ul { list-style: none; }
 /* =========================================================
    Pages internes & composants partagés
    ========================================================= */
-html.menu-open, html.menu-open body { overflow: hidden; }
+html.menu-open { overflow: hidden; }
 .gnav__links a[aria-current="page"] { color: #fff; }
 
 /* Hero des pages internes */
@@ -941,6 +942,19 @@ a.tile:hover .tile__stat { color: var(--color-gold); }
 .frame--image .frame__copy { padding-top: 4px; flex: 1; display: flex; flex-direction: column; align-items: flex-start; }
 .frame--image .frame__copy .link { margin-top: auto; }
 .audience__grid--3 .pale-card__title { font-size: clamp(24px, 2.3vw, 30px); }
+
+/* Bouton menu dans la barre collante (mobile) : le menu reste accessible après défilement */
+.lnav__burger { display: none; background: none; border: 0; padding: 12px 10px; margin: 0 -6px 0 0; cursor: pointer; }
+.lnav__burger span { display: block; width: 18px; height: 1.5px; background: #ccc; margin: 4px 0; }
+@media (max-width: 833px) {
+  .lnav__burger { display: block; }
+  .lnav__right { gap: 10px; flex: 0 0 auto; }
+  .lnav__name { min-width: 0; flex: 1 1 auto; margin-right: 10px; }
+  .lnav__name > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+}
+@media (max-width: 480px) {
+  .lnav__name > span { display: none; }
+}
 
 /* =========================================================
    Comparaison temporaire : bandeau en haut de chaque page pour passer
