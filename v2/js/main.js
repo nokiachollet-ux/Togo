@@ -30,7 +30,10 @@
     document.documentElement.classList.remove('menu-open');
   }
   if (burger && gnav) {
+    /* Le panneau du menu se place juste sous l'en-tête, là où il est à l'écran */
+    var placeMenu = function () { gnav.style.setProperty('--menu-top', Math.max(0, gnav.getBoundingClientRect().bottom) + 'px'); };
     burger.addEventListener('click', function () {
+      placeMenu();
       var open = gnav.classList.toggle('is-open');
       burger.setAttribute('aria-expanded', open);
       burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
@@ -38,7 +41,10 @@
     });
     $$('.gnav__mobile a').forEach(function (a) { a.addEventListener('click', closeMenu); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && gnav.classList.contains('is-open')) closeMenu(); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1100 && gnav.classList.contains('is-open')) closeMenu(); });
+    window.addEventListener('resize', function () {
+      if (!gnav.classList.contains('is-open')) return;
+      if (window.innerWidth > 1100) closeMenu(); else placeMenu();
+    });
   }
 
   /* ---------- Compte à rebours : mission au Togo ---------- */
@@ -60,6 +66,21 @@
       label.innerHTML = '<strong>Mission réalisée</strong>merci à tous';
     }
   });
+
+  /* ---------- Arrivée sur une ancre depuis une autre page ----------
+     Le navigateur se place sur la section avant le chargement des polices,
+     qui décale ensuite la page : on se recale une fois tout chargé. */
+  if (window.location.hash.length > 1) {
+    var anchor = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (anchor) {
+      var realign = function () { anchor.scrollIntoView({ block: 'start', behavior: 'instant' }); };
+      var userMoved = false;
+      ['wheel', 'touchmove', 'keydown'].forEach(function (ev) { window.addEventListener(ev, function () { userMoved = true; }, { once: true, passive: true }); });
+      var settle = function () { if (!userMoved) realign(); };
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle);
+      window.addEventListener('load', function () { settle(); setTimeout(settle, 300); });
+    }
+  }
 
   /* ---------- Questions fréquentes ---------- */
   $$('.faq__item').forEach(function (item) {

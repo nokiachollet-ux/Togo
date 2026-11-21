@@ -37,6 +37,15 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 833 && gnav.classList.contains('is-open')) closeMenu(); });
   }
 
+  /* Bouton menu de la barre collante : remonte en haut de page puis ouvre le menu */
+  $$('.lnav__burger').forEach(function (b) {
+    b.addEventListener('click', function () {
+      window.scrollTo(0, 0);
+      if (burger && !gnav.classList.contains('is-open')) burger.click();
+      if (burger) burger.focus();
+    });
+  });
+
   /* ---------- Compte à rebours : mission au Togo ---------- */
   $$('[data-countdown]').forEach(function (box) {
     var start = new Date(box.dataset.countdown + 'T00:00:00');
