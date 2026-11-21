@@ -941,3 +941,24 @@ a.tile:hover .tile__stat { color: var(--color-gold); }
 .frame--image .frame__copy { padding-top: 4px; flex: 1; display: flex; flex-direction: column; align-items: flex-start; }
 .frame--image .frame__copy .link { margin-top: auto; }
 .audience__grid--3 .pale-card__title { font-size: clamp(24px, 2.3vw, 30px); }
+
+/* =========================================================
+   Comparaison temporaire : bouton vers la nouvelle version (v2/)
+   À retirer une fois la version définitive choisie.
+   ========================================================= */
+body { padding-bottom: 84px; }
+.compare-switch {
+  position: fixed; z-index: 1000; left: 50%; transform: translateX(-50%);
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: flex; align-items: center; gap: 10px; max-width: calc(100vw - 32px);
+  padding: 12px 22px; border-radius: 999px; white-space: nowrap;
+  font: 600 16px/1.25 var(--font-text);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .35); transition: transform .2s, box-shadow .2s;
+  background: var(--color-gold); color: #0b1f4d;
+}
+.compare-switch:hover { transform: translateX(-50%) translateY(-2px); box-shadow: 0 12px 32px rgba(0, 0, 0, .4); }
+.compare-switch small { font-size: 15px; font-weight: 400; opacity: .8; }
+/* Le bouton de comparaison ne doit pas masquer les boutons du Hero */
+.hero__content { padding-bottom: calc(clamp(72px, 11vh, 120px) + 64px); }
+.hero--short .hero__content { padding-bottom: calc(clamp(48px, 8vh, 90px) + 64px); }
+@media (max-width: 560px) { .hero__content { padding-bottom: 124px; } }
