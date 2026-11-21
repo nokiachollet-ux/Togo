@@ -14,21 +14,22 @@ Site statique (HTML, CSS, JavaScript) de l'association humanitaire et solidaire
 
 Le site contient pour l'instant **deux versions**, pour que l'association puisse les comparer :
 
-- **Version actuelle** (à la racine) : galerie sombre, animations GSAP. Chaque page affiche
-  en bas un bouton doré « Voir la nouvelle version › ».
-- **Nouvelle version** (dossier `v2/`) : la charte graphique décrite ci-dessus. Chaque page
-  affiche un bouton « ‹ Revoir la version actuelle ». Les pages `v2/` ne sont pas
+- **Version actuelle** (à la racine) : galerie sombre, animations GSAP. Un bandeau doré en
+  haut de chaque page propose « Voir la nouvelle version › ».
+- **Nouvelle version** (dossier `v2/`) : la charte graphique décrite ci-dessus. Le même
+  bandeau propose « ‹ Revoir la version actuelle ». Les pages `v2/` ne sont pas
   référencées par les moteurs de recherche (`noindex`) et partagent le dossier `img/`.
 
-Le bouton ouvre toujours la même page dans l'autre version.
+Le bandeau fait partie de la page (il ne flotte pas au-dessus du contenu) et ouvre toujours
+la même page dans l'autre version.
 
 **Une fois le choix fait :**
 
 - *Nouvelle version retenue* : remplacer les pages, `css/` et `js/` de la racine par ceux
-  de `v2/`, remettre les chemins `../img/` en `img/`, retirer la balise `noindex`, le bouton
-  `compare-switch` et son style, puis supprimer `v2/` et `js/vendor/`.
-- *Version actuelle conservée* : supprimer `v2/`, retirer le bouton `compare-switch` des
-  pages et les règles « Comparaison temporaire » à la fin de `css/style.css`.
+  de `v2/`, remettre les chemins `../img/` en `img/`, retirer la balise `noindex`, le bandeau
+  `compare-bar` et son style, puis supprimer `v2/` et `js/vendor/`.
+- *Version actuelle conservée* : supprimer `v2/`, retirer le bandeau `compare-bar` des
+  pages et les règles « Comparaison temporaire » de `css/style.css`.
 
 ## Pages
 

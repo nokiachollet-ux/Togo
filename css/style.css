@@ -943,22 +943,26 @@ a.tile:hover .tile__stat { color: var(--color-gold); }
 .audience__grid--3 .pale-card__title { font-size: clamp(24px, 2.3vw, 30px); }
 
 /* =========================================================
-   Comparaison temporaire : bouton vers la nouvelle version (v2/)
-   À retirer une fois la version définitive choisie.
+   Comparaison temporaire : bandeau en haut de chaque page pour passer
+   d'une version du site à l'autre. À retirer une fois la version choisie.
    ========================================================= */
-body { padding-bottom: 84px; }
-.compare-switch {
-  position: fixed; z-index: 1000; left: 50%; transform: translateX(-50%);
-  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-  display: flex; align-items: center; gap: 10px; max-width: calc(100vw - 32px);
-  padding: 12px 22px; border-radius: 999px; white-space: nowrap;
-  font: 600 16px/1.25 var(--font-text);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, .35); transition: transform .2s, box-shadow .2s;
-  background: var(--color-gold); color: #0b1f4d;
+.compare-bar {
+  position: relative; z-index: 40;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 16px;
+  padding: 10px max(16px, env(safe-area-inset-left, 0px)) 10px max(16px, env(safe-area-inset-right, 0px));
+  background: #f2c14e; color: #0b1f4d; text-align: center;
+  font-family: var(--font-text); font-size: 15px; line-height: 1.35; letter-spacing: 0;
 }
-.compare-switch:hover { transform: translateX(-50%) translateY(-2px); box-shadow: 0 12px 32px rgba(0, 0, 0, .4); }
-.compare-switch small { font-size: 15px; font-weight: 400; opacity: .8; }
-/* Le bouton de comparaison ne doit pas masquer les boutons du Hero */
-.hero__content { padding-bottom: calc(clamp(72px, 11vh, 120px) + 64px); }
-.hero--short .hero__content { padding-bottom: calc(clamp(48px, 8vh, 90px) + 64px); }
-@media (max-width: 560px) { .hero__content { padding-bottom: 124px; } }
+.compare-bar p { margin: 0; }
+.compare-bar strong { font-weight: 700; }
+.compare-bar__link {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 40px;
+  padding: 8px 18px; border-radius: 999px; background: #0b1f4d; color: #fff;
+  font-weight: 700; font-size: 15px; white-space: nowrap; text-decoration: none;
+  transition: background-color .2s;
+}
+.compare-bar__link:hover { background: #14306b; color: #fff; }
+.compare-bar__link:focus-visible { outline: 3px solid #0b1f4d; outline-offset: 3px; }
+
+/* Écrans peu hauts : le titre du Hero ne passe plus sous la barre de navigation */
+.hero { padding-top: 84px; }
