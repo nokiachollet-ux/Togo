@@ -4,11 +4,31 @@ Site statique (HTML, CSS, JavaScript) de l'association humanitaire et solidaire
 **Les Mains de l'Espérance Internationale**.
 
 - **Contenu** (textes, logo, visuels) : repris de [lesmainsdelesperance.fr](https://lesmainsdelesperance.fr).
-- **Charte graphique** : chaleureuse et lisible, pensée pour les donateurs, bénévoles,
+- **Nouvelle charte graphique** (`v2/`) : chaleureuse et lisible, pensée pour les donateurs, bénévoles,
   communautés chrétiennes et partenaires de l'association. Fonds ivoire et sable, bleu marine
   du logo pour les titres et les sections fortes, or de l'espérance pour les boutons d'action.
   Titres à empattements (Lora), texte courant en Source Sans 3 à 18 px. Photos de terrain
   mises en avant, animations limitées à une apparition douce des blocs.
+
+## Deux versions en ligne, le temps de choisir
+
+Le site contient pour l'instant **deux versions**, pour que l'association puisse les comparer :
+
+- **Version actuelle** (à la racine) : galerie sombre, animations GSAP. Chaque page affiche
+  en bas un bouton doré « Voir la nouvelle version › ».
+- **Nouvelle version** (dossier `v2/`) : la charte graphique décrite ci-dessus. Chaque page
+  affiche un bouton « ‹ Revoir la version actuelle ». Les pages `v2/` ne sont pas
+  référencées par les moteurs de recherche (`noindex`) et partagent le dossier `img/`.
+
+Le bouton ouvre toujours la même page dans l'autre version.
+
+**Une fois le choix fait :**
+
+- *Nouvelle version retenue* : remplacer les pages, `css/` et `js/` de la racine par ceux
+  de `v2/`, remettre les chemins `../img/` en `img/`, retirer la balise `noindex`, le bouton
+  `compare-switch` et son style, puis supprimer `v2/` et `js/vendor/`.
+- *Version actuelle conservée* : supprimer `v2/`, retirer le bouton `compare-switch` des
+  pages et les règles « Comparaison temporaire » à la fin de `css/style.css`.
 
 ## Pages
 
@@ -23,8 +43,8 @@ Site statique (HTML, CSS, JavaScript) de l'association humanitaire et solidaire
 
 ## Structure
 
-- `css/style.css` : styles et responsive (mobile dès 320 px)
-- `js/main.js` : menu mobile, FAQ, formulaire, compte à rebours de la mission au Togo, apparition douce des blocs (sans bibliothèque externe)
+- `css/style.css`, `js/main.js`, `js/vendor/` : version actuelle (GSAP 3.12.5 + ScrollTrigger en copie locale)
+- `v2/` : nouvelle version (mêmes pages, `v2/css/style.css`, `v2/js/main.js` sans bibliothèque externe)
 - `img/` : visuels de l'association optimisés en WebP (versions 700/800 px pour mobile)
 
 Les liens vers `contact.html?sujet=…` (`don`, `benevolat`, `partenariat`, `togo`, `projet`,

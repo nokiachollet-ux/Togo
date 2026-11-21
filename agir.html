@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Agir avec nous — Les Mains de l’Espérance Internationale</title>
   <meta name="description" content="Faire un don, devenir bénévole, partenaire ou mécène, acheter solidaire : découvrez comment soutenir Les Mains de l’Espérance Internationale.">
-  <meta name="theme-color" content="#14306b">
+  <meta name="theme-color" content="#000000">
   <meta property="og:title" content="Agir avec nous — Les Mains de l’Espérance Internationale">
   <meta property="og:description" content="Faire un don, devenir bénévole, partenaire ou mécène, acheter solidaire : découvrez comment soutenir Les Mains de l’Espérance Internationale.">
   <meta property="og:type" content="website">
@@ -15,19 +15,18 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <a class="skip" href="#contenu">Aller au contenu</a>
 
-  <!-- En-tête -->
+  <!-- Navigation globale -->
   <header class="gnav">
     <div class="gnav__inner">
-      <a href="index.html" class="gnav__brand" aria-label="Les Mains de l’Espérance Internationale, accueil">
-        <img src="img/logo.webp" alt="" width="52" height="52">
-        <span class="gnav__name">Les Mains de l’Espérance<small>Internationale</small></span>
+      <a href="index.html" class="gnav__logo" aria-label="Les Mains de l’Espérance Internationale, accueil">
+        <img src="img/logo.webp" alt="" width="26" height="26">
       </a>
       <nav class="gnav__links" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
@@ -36,24 +35,40 @@
         <a href="agir.html" aria-current="page">Agir avec nous</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="agir.html#don" class="pill pill--gold gnav__don">Faire un don</a>
-      <button class="gnav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span><span></span></button>
+      <button class="gnav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>
     </div>
     <nav class="gnav__mobile" id="menu-mobile" aria-label="Menu mobile">
-      <a href="index.html">Accueil</a>
-      <a href="association.html">Qui sommes-nous&nbsp;?</a>
-      <a href="missions.html">Nos missions</a>
-      <a href="agir.html" aria-current="page">Agir avec nous</a>
-      <a href="contact.html">Contact</a>
-      <a href="agir.html#don" class="pill pill--gold pill--lg">Faire un don</a>
+        <a href="index.html">Accueil</a>
+        <a href="association.html">Qui sommes-nous&nbsp;?</a>
+        <a href="missions.html">Nos missions</a>
+        <a href="agir.html" aria-current="page">Agir avec nous</a>
+        <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <!-- Navigation locale -->
+  <div class="lnav-wrap">
+    <div class="lnav">
+      <a href="#top" class="lnav__name"><img src="img/logo.webp" alt="" width="28" height="28"><span><span class="opt">Les </span>Mains de l’Espérance</span></a>
+      <div class="lnav__right">
+        <a href="#don" class="lnav__link">Don</a>
+        <a href="#benevole" class="lnav__link">Bénévolat</a>
+        <a href="#partenaires" class="lnav__link">Partenaires</a>
+        <a href="#faq" class="lnav__link">Questions</a>
+        <a href="#don" class="pill pill--blue magnetic">Faire un don</a>
+      </div>
+    </div>
+  </div>
 
   <main id="top">
     <span id="contenu" tabindex="-1"></span>
 
     <!-- HERO -->
     <section class="hero hero--page hero--short" aria-label="Introduction">
+      <div class="hero__stage">
+        <canvas class="hero__canvas" data-shape="wave" data-y="0.36" aria-hidden="true"></canvas>
+        <div class="hero__halo" aria-hidden="true"></div>
+      </div>
       <div class="hero__content">
         <p class="hero__label"><span class="mask"><span>Agir avec nous</span></span></p>
         <h1 class="hero__title">
@@ -68,7 +83,7 @@
     <section class="manifesto" aria-label="S’engager à nos côtés">
       <div class="container">
         <p class="eyebrow">S’engager à nos côtés</p>
-        <p class="manifesto__text">
+        <p class="manifesto__text" data-split>
           Chacun peut contribuer à faire grandir notre association. En devenant bénévole, partenaire ou en apportant votre soutien, vous participez à des actions solidaires et humanitaires.
         </p>
       </div>
@@ -130,7 +145,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v6M12 7.5v.01"/></svg>
             <p><strong>Le don en ligne arrive bientôt.</strong> En attendant, écrivez-nous&nbsp;: nous vous indiquerons comment soutenir l’association.</p>
           </div>
-          <a href="contact.html?sujet=don" class="pill pill--gold pill--lg">Je souhaite faire un don</a>
+          <a href="contact.html?sujet=don" class="pill pill--blue pill--lg magnetic">Je souhaite faire un don</a>
         </div>
         <div class="check-card reveal-up">
           <h3>Ce que finance votre générosité</h3>
@@ -156,10 +171,10 @@
           <p class="body-lg" style="margin-top:24px">Notre première mission est d’<strong>accompagner les bénévoles et les missionnaires</strong> qui souhaitent mettre leurs compétences au service des autres, en France comme à l’international.</p>
           <p class="body-lg">Maçonnerie, charpente, couverture, rénovation, distribution de repas, organisation d’événements, accompagnement&nbsp;: chaque compétence peut être utile.</p>
           <p class="body-lg">Car nous sommes convaincus qu’<strong>un manque de moyens financiers ne devrait pas empêcher une personne volontaire</strong> d’apporter son aide là où elle est nécessaire.</p>
-          <a href="contact.html?sujet=benevolat" class="pill pill--gold pill--lg">Proposer mon aide</a>
+          <a href="contact.html?sujet=benevolat" class="pill pill--blue pill--lg magnetic">Proposer mon aide</a>
         </div>
         <figure class="photo reveal-photo">
-          <img src="img/quatre-scenes.webp" srcset="img/quatre-scenes-800.webp 800w, img/quatre-scenes.webp 1536w" sizes="(max-width: 833px) 100vw, 50vw" alt="Quatre scènes de bénévoles de l’association aidant des familles à travers le monde" width="1536" height="1024" loading="lazy">
+          <img class="parallax" data-speed="-0.05" src="img/quatre-scenes.webp" srcset="img/quatre-scenes-800.webp 800w, img/quatre-scenes.webp 1536w" sizes="(max-width: 833px) 100vw, 50vw" alt="Quatre scènes de bénévoles de l’association aidant des familles à travers le monde" width="1536" height="1024" loading="lazy">
         </figure>
       </div>
     </section>
@@ -210,7 +225,7 @@
           <p class="togo__lead">Pour donner vie à nos engagements, nous développons notre propre <strong class="gold">marque de vêtements</strong> et une boutique en ligne solidaire.</p>
           <p class="togo__lead">L’intégralité des bénéfices nets sera consacrée aux actions et aux projets de l’association. Acheter un vêtement, c’est aussi contribuer à une action solidaire.</p>
           <div class="togo__actions" style="margin-top:32px">
-            <a href="contact.html?sujet=boutique" class="pill pill--outline pill--lg">Être prévenu du lancement</a>
+            <a href="contact.html?sujet=boutique" class="pill pill--outline pill--lg magnetic">Être prévenu du lancement</a>
           </div>
         </div>
       </div>
@@ -253,11 +268,11 @@
       <div class="cta__glow" aria-hidden="true"></div>
       <div class="container cta__inner">
         <p class="eyebrow">Ensemble</p>
-        <h2 class="cta__title">Tendons la main.</h2>
+        <h2 class="cta__title" data-fill>Tendons la main.</h2>
         <p class="cta__sub">Une question, une envie d’aider, un projet à proposer&nbsp;? Écrivez-nous.</p>
         <div class="cta__actions">
-          <a href="contact.html" class="pill pill--gold pill--lg">Nous contacter</a>
-          <a href="missions.html#togo" class="pill pill--outline pill--lg">La mission au Togo</a>
+          <a href="contact.html" class="pill pill--blue pill--lg magnetic">Nous contacter</a>
+          <a href="missions.html#togo" class="pill pill--outline pill--lg magnetic">La mission au Togo</a>
         </div>
       </div>
     </section>
@@ -305,6 +320,11 @@
     </div>
   </footer>
 
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Comparaison temporaire entre la version actuelle et la nouvelle version -->
+  <a href="v2/agir.html" class="compare-switch"><span>Voir la nouvelle version ›</span><small>Version 2</small></a>
 </body>
 </html>

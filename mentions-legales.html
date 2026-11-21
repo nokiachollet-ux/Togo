@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mentions légales — Les Mains de l’Espérance Internationale</title>
   <meta name="description" content="Mentions légales et politique de confidentialité du site de l’association Les Mains de l’Espérance Internationale.">
-  <meta name="theme-color" content="#14306b">
+  <meta name="theme-color" content="#000000">
   <meta property="og:title" content="Mentions légales — Les Mains de l’Espérance Internationale">
   <meta property="og:description" content="Mentions légales et politique de confidentialité du site de l’association Les Mains de l’Espérance Internationale.">
   <meta property="og:type" content="website">
@@ -15,19 +15,18 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <a class="skip" href="#contenu">Aller au contenu</a>
 
-  <!-- En-tête -->
+  <!-- Navigation globale -->
   <header class="gnav">
     <div class="gnav__inner">
-      <a href="index.html" class="gnav__brand" aria-label="Les Mains de l’Espérance Internationale, accueil">
-        <img src="img/logo.webp" alt="" width="52" height="52">
-        <span class="gnav__name">Les Mains de l’Espérance<small>Internationale</small></span>
+      <a href="index.html" class="gnav__logo" aria-label="Les Mains de l’Espérance Internationale, accueil">
+        <img src="img/logo.webp" alt="" width="26" height="26">
       </a>
       <nav class="gnav__links" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
@@ -36,18 +35,27 @@
         <a href="agir.html">Agir avec nous</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="agir.html#don" class="pill pill--gold gnav__don">Faire un don</a>
-      <button class="gnav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span><span></span></button>
+      <button class="gnav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>
     </div>
     <nav class="gnav__mobile" id="menu-mobile" aria-label="Menu mobile">
-      <a href="index.html">Accueil</a>
-      <a href="association.html">Qui sommes-nous&nbsp;?</a>
-      <a href="missions.html">Nos missions</a>
-      <a href="agir.html">Agir avec nous</a>
-      <a href="contact.html">Contact</a>
-      <a href="agir.html#don" class="pill pill--gold pill--lg">Faire un don</a>
+        <a href="index.html">Accueil</a>
+        <a href="association.html">Qui sommes-nous&nbsp;?</a>
+        <a href="missions.html">Nos missions</a>
+        <a href="agir.html">Agir avec nous</a>
+        <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <!-- Navigation locale -->
+  <div class="lnav-wrap">
+    <div class="lnav">
+      <a href="#top" class="lnav__name"><img src="img/logo.webp" alt="" width="28" height="28"><span><span class="opt">Les </span>Mains de l’Espérance</span></a>
+      <div class="lnav__right">
+        <a href="#confidentialite" class="lnav__link">Confidentialité</a>
+        <a href="agir.html#don" class="pill pill--blue magnetic">Faire un don</a>
+      </div>
+    </div>
+  </div>
 
   <main id="top">
     <span id="contenu" tabindex="-1"></span>
@@ -133,6 +141,11 @@
     </div>
   </footer>
 
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Comparaison temporaire entre la version actuelle et la nouvelle version -->
+  <a href="v2/mentions-legales.html" class="compare-switch"><span>Voir la nouvelle version ›</span><small>Version 2</small></a>
 </body>
 </html>
