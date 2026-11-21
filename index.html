@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Les Mains de l’Espérance Internationale — Association humanitaire et solidaire</title>
   <meta name="description" content="Association humanitaire et solidaire inspirée par les valeurs chrétiennes : missions humanitaires internationales, protection de l’enfance et accompagnement des aînés. Prochaine mission : le Togo, en février 2027.">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#14306b">
   <meta property="og:title" content="Les Mains de l’Espérance Internationale — Association humanitaire et solidaire">
   <meta property="og:description" content="Association humanitaire et solidaire inspirée par les valeurs chrétiennes : missions humanitaires internationales, protection de l’enfance et accompagnement des aînés. Prochaine mission : le Togo, en février 2027.">
   <meta property="og:type" content="website">
@@ -15,25 +15,24 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Préchargeur -->
-  <div class="loader" aria-hidden="true">
-    <img class="loader__logo" src="img/logo.webp" alt="" width="92" height="92">
-    <div class="loader__word"><span>E</span><span>s</span><span>p</span><span class="is-accent">é</span><span>r</span><span>a</span><span>n</span><span>c</span><span>e</span></div>
-    <div class="loader__bar"><i></i></div>
-  </div>
-
   <a class="skip" href="#contenu">Aller au contenu</a>
 
-  <!-- Navigation globale -->
+  <!-- Bandeau d'annonce -->
+  <div class="strip">
+    <p><span class="new">Nouveau</span> Mission de reconnaissance au Togo du 11 au 17 février 2027. <a href="missions.html#togo" class="link">Découvrir le projet&nbsp;›</a></p>
+  </div>
+
+  <!-- En-tête -->
   <header class="gnav">
     <div class="gnav__inner">
-      <a href="index.html" class="gnav__logo" aria-label="Les Mains de l’Espérance Internationale, accueil">
-        <img src="img/logo.webp" alt="" width="26" height="26">
+      <a href="index.html" class="gnav__brand" aria-label="Les Mains de l’Espérance Internationale, accueil">
+        <img src="img/logo.webp" alt="" width="52" height="52">
+        <span class="gnav__name">Les Mains de l’Espérance<small>Internationale</small></span>
       </a>
       <nav class="gnav__links" aria-label="Navigation principale">
         <a href="index.html" aria-current="page">Accueil</a>
@@ -42,64 +41,51 @@
         <a href="agir.html">Agir avec nous</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button class="gnav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>
+      <a href="agir.html#don" class="pill pill--gold gnav__don">Faire un don</a>
+      <button class="gnav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span><span></span></button>
     </div>
     <nav class="gnav__mobile" id="menu-mobile" aria-label="Menu mobile">
-        <a href="index.html" aria-current="page">Accueil</a>
-        <a href="association.html">Qui sommes-nous&nbsp;?</a>
-        <a href="missions.html">Nos missions</a>
-        <a href="agir.html">Agir avec nous</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="association.html">Qui sommes-nous&nbsp;?</a>
+      <a href="missions.html">Nos missions</a>
+      <a href="agir.html">Agir avec nous</a>
+      <a href="contact.html">Contact</a>
+      <a href="agir.html#don" class="pill pill--gold pill--lg">Faire un don</a>
     </nav>
   </header>
-
-  <!-- Bandeau d'annonce -->
-  <div class="strip">
-    <p><span class="new">Nouveau</span> Mission de reconnaissance au Togo du 11 au 17 février 2027. <a href="missions.html#togo" class="link">Découvrir le projet&nbsp;›</a></p>
-  </div>
-
-  <!-- Navigation locale -->
-  <div class="lnav-wrap">
-    <div class="lnav">
-      <a href="#top" class="lnav__name"><img src="img/logo.webp" alt="" width="28" height="28"><span><span class="opt">Les </span>Mains de l’Espérance</span></a>
-      <div class="lnav__right">
-        <a href="#missions" class="lnav__link">Missions</a>
-        <a href="#togo" class="lnav__link">Togo 2027</a>
-        <a href="#engagements" class="lnav__link">Engagements</a>
-        <a href="agir.html#don" class="pill pill--blue magnetic">Faire un don</a>
-      </div>
-    </div>
-  </div>
 
   <main id="top">
     <span id="contenu" tabindex="-1"></span>
 
     <!-- HERO -->
-    <section class="hero" aria-label="Introduction">
-      <div class="hero__stage">
-        <canvas class="hero__canvas" data-shape="sphere" aria-hidden="true"></canvas>
-        <div class="hero__halo" aria-hidden="true"></div>
-      </div>
-      <div class="hero__content">
-        <p class="hero__label"><span class="mask"><span>Les Mains de l’Espérance</span></span></p>
-        <h1 class="hero__title">
-          <span class="mask"><span>Tendre la main</span></span>
-          <span class="mask"><span>à ceux qui en <em>ont besoin.</em></span></span>
-        </h1>
-        <p class="hero__sub"><span class="mask"><span>Association humanitaire et solidaire, en France et à l’international.</span></span></p>
-        <div class="hero__cta">
-          <span class="capsule">Missions humanitaires · Solidarité locale</span>
-          <a href="agir.html" class="pill pill--blue pill--lg magnetic">Agir avec nous</a>
+    <section class="hero hero--home" aria-label="Introduction">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__label">Association humanitaire et solidaire</p>
+          <h1 class="hero__title">Tendre la main à ceux qui en <em>ont besoin.</em></h1>
+          <p class="hero__sub">Inspirés par les valeurs chrétiennes de solidarité, de partage et d’entraide, nous agissons en France et à l’international auprès des enfants, des aînés et des communautés les plus fragiles.</p>
+          <div class="hero__cta">
+            <a href="agir.html#don" class="pill pill--gold pill--lg">Faire un don</a>
+            <a href="agir.html#benevole" class="pill pill--outline pill--lg">Devenir bénévole</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>3 priorités</strong>Missions, enfance, aînés</li>
+            <li><strong>Février 2027</strong>Première mission au Togo</li>
+            <li><strong>Bilan annuel</strong>Publié sur ce site</li>
+          </ul>
         </div>
+        <figure class="hero__photo">
+          <img src="img/distribution-repas.webp" srcset="img/distribution-repas-800.webp 800w, img/distribution-repas.webp 1536w" sizes="(max-width: 833px) 100vw, 50vw" alt="Des bénévoles de l’association servent une soupe chaude à des personnes dans la rue" width="1536" height="1024">
+          <figcaption class="hero__badge"><img src="img/logo.webp" alt="" width="44" height="44"><span><strong>Ensemble,</strong> tendons la main.</span></figcaption>
+        </figure>
       </div>
-      <div class="hero__scroll" aria-hidden="true"><span>Défiler</span><i></i></div>
     </section>
 
     <!-- QUI SOMMES-NOUS -->
     <section class="manifesto" id="association" aria-label="Qui sommes-nous ?">
       <div class="container">
         <p class="eyebrow">Qui sommes-nous&nbsp;?</p>
-        <p class="manifesto__text" data-split>
+        <p class="manifesto__text">
           Les Mains de l’Espérance Internationale est une association humanitaire et solidaire née d’une volonté simple&nbsp;: tendre la main à ceux qui en ont besoin.
         </p>
         <div class="manifesto__more">
@@ -120,7 +106,7 @@
 
         <div class="pillars__grid">
           <article class="frame frame--image reveal-frame">
-            <div class="frame__visual frame__visual--image parallax" data-speed="-0.08">
+            <div class="frame__visual frame__visual--image">
               <img src="img/embleme-famille.webp" srcset="img/embleme-famille-700.webp 700w, img/embleme-famille.webp 1400w" sizes="(max-width: 833px) 100vw, 50vw" alt="Deux mains bleues protégeant une famille dorée" width="1400" height="933" loading="lazy">
             </div>
             <div class="frame__copy">
@@ -132,7 +118,7 @@
           </article>
 
           <article class="frame frame--image reveal-frame">
-            <div class="frame__visual frame__visual--image parallax" data-speed="-0.08">
+            <div class="frame__visual frame__visual--image">
               <img src="img/embleme-globe.webp" srcset="img/embleme-globe-700.webp 700w, img/embleme-globe.webp 1400w" sizes="(max-width: 833px) 100vw, 50vw" alt="Des mains bleues portant le globe et une église, survolés par un avion" width="1400" height="933" loading="lazy">
             </div>
             <div class="frame__copy">
@@ -189,7 +175,7 @@
           <article class="course course--cta">
             <p class="product-label">Ensemble</p>
             <h3 class="course__title">Construisons l’espérance.</h3>
-            <a href="missions.html" class="pill pill--blue magnetic">Découvrir nos missions</a>
+            <a href="missions.html" class="pill pill--gold">Découvrir nos missions</a>
           </article>
         </div>
         <div class="program__progress" aria-hidden="true"><i></i></div>
@@ -215,7 +201,7 @@
             <div><dt>Retour</dt><dd>17 février 2027<span>Préparer les futurs travaux</span></dd></div>
           </dl>
           <div class="togo__actions">
-            <a href="agir.html#don" class="pill pill--blue pill--lg magnetic">Soutenir la mission</a>
+            <a href="agir.html#don" class="pill pill--gold pill--lg">Soutenir la mission</a>
             <a href="missions.html#togo" class="link">Le projet en détail ›</a>
           </div>
         </div>
@@ -338,11 +324,11 @@
       <div class="cta__glow" aria-hidden="true"></div>
       <div class="container cta__inner">
         <p class="eyebrow">Ensemble</p>
-        <h2 class="cta__title" data-fill>Tendons la main.</h2>
+        <h2 class="cta__title">Tendons la main.</h2>
         <p class="cta__sub">Qu’il s’agisse d’un don, d’un achat solidaire, d’un partenariat ou de quelques heures de bénévolat, chaque geste compte.</p>
         <div class="cta__actions">
-          <a href="agir.html#don" class="pill pill--blue pill--lg magnetic">Faire un don</a>
-          <a href="contact.html" class="pill pill--outline pill--lg magnetic">Nous contacter</a>
+          <a href="agir.html#don" class="pill pill--gold pill--lg">Faire un don</a>
+          <a href="contact.html" class="pill pill--outline pill--lg">Nous contacter</a>
         </div>
         <dl class="contact-grid">
           <div><dt>Création</dt><dd>Novembre 2026</dd></div>
@@ -395,8 +381,6 @@
     </div>
   </footer>
 
-  <script src="js/vendor/gsap.min.js"></script>
-  <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,9 +4,11 @@ Site statique (HTML, CSS, JavaScript) de l'association humanitaire et solidaire
 **Les Mains de l'Espérance Internationale**.
 
 - **Contenu** (textes, logo, visuels) : repris de [lesmainsdelesperance.fr](https://lesmainsdelesperance.fr).
-- **Design et animations** : repris du site du dépôt `site-web-test1` (galerie sombre,
-  typographie sculpturale, animations GSAP + ScrollTrigger), adaptés aux couleurs de
-  l'association : bleu des mains tendues pour les actions, or de l'espérance pour les accents.
+- **Charte graphique** : chaleureuse et lisible, pensée pour les donateurs, bénévoles,
+  communautés chrétiennes et partenaires de l'association. Fonds ivoire et sable, bleu marine
+  du logo pour les titres et les sections fortes, or de l'espérance pour les boutons d'action.
+  Titres à empattements (Lora), texte courant en Source Sans 3 à 18 px. Photos de terrain
+  mises en avant, animations limitées à une apparition douce des blocs.
 
 ## Pages
 
@@ -22,8 +24,7 @@ Site statique (HTML, CSS, JavaScript) de l'association humanitaire et solidaire
 ## Structure
 
 - `css/style.css` : styles et responsive (mobile dès 320 px)
-- `js/main.js` : animations, menu mobile, FAQ, formulaire, compte à rebours de la mission au Togo
-- `js/vendor/` : GSAP 3.12.5 et ScrollTrigger (copie locale)
+- `js/main.js` : menu mobile, FAQ, formulaire, compte à rebours de la mission au Togo, apparition douce des blocs (sans bibliothèque externe)
 - `img/` : visuels de l'association optimisés en WebP (versions 700/800 px pour mobile)
 
 Les liens vers `contact.html?sujet=…` (`don`, `benevolat`, `partenariat`, `togo`, `projet`,
